@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Muslyr</string>
+    <string name="title_history">History</string>
+    <string name="title_search">Search</string>
+    <string name="title_featured">Featured</string>
+    <string name="music_icon">music icon</string>
+    <string name="track_name">track name</string>
+    <string name="artist">artist</string>
+    <string name="search_hint">Type lyrics, track or artist</string>
+    <string name="top_tracks_turkey">Top Tracks in Turkey</string>
+    <string name="dummy_text">Dummy Text</string>
+    <string name="viewed_tracks">Viewed Tracks</string>
+</resources>

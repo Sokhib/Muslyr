@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools" android:id="@+id/mobile_navigation"
+            app:startDestination="@id/navigation_history">
+
+    <fragment android:id="@+id/navigation_history"
+              android:name="com.databind.aquaholic.muslyr.ui.history.MusicHistoryListFragment"
+              android:label="History" tools:layout="@layout/history_fragment"/>
+    <fragment
+            android:name="com.databind.aquaholic.muslyr.ui.search.MusicSearchListFragment"
+            android:label="Search" tools:layout="@layout/search_fragment" android:id="@+id/navigation_search">
+        <action android:id="@+id/action_search_detail" app:destination="@id/lyricsFragment"/>
+    </fragment>
+    <fragment android:id="@+id/navigation_featured"
+              android:name="com.databind.aquaholic.muslyr.ui.featured.MusicFeaturedListFragment"
+              android:label="Featured" tools:layout="@layout/featured_fragment">
+        <action android:id="@+id/action_featured_detail" app:destination="@id/lyricsFragment"/>
+    </fragment>
+    <fragment android:id="@+id/lyricsFragment" android:name="com.databind.aquaholic.muslyr.ui.details.LyricsFragment"
+              android:label="Lyrics" tools:layout="@layout/lyrics_fragment">
+        <argument android:name="id" app:argType="integer" android:defaultValue="0"/>
+        <argument android:name="trackName" app:argType="string" android:defaultValue="Track Name"/>
+        <argument android:name="trackArtist" app:argType="string" android:defaultValue="Artist"/>
+    </fragment>
+</navigation>

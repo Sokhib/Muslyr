@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/cons_list_item" android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:background="@drawable/rounded_background"
+        app:cardCornerRadius="50dp"
+>
+
+    <ImageView
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            tools:srcCompat="@drawable/baseline_queue_music_black_48dp"
+            android:id="@+id/imageView"
+            android:contentDescription="@string/music_icon"
+            tools:ignore="MissingConstraints"
+            android:layout_marginTop="16dp"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginStart="8dp"
+            android:layout_marginBottom="16dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+    <TextView
+            android:text="@string/track_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/track_name" app:layout_constraintStart_toEndOf="@+id/imageView"
+            android:layout_marginStart="8dp"
+            android:textSize="16sp" android:layout_marginTop="20dp" app:layout_constraintTop_toTopOf="parent"/>
+    <TextView
+            android:text="@string/artist"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/artist_name"
+            app:layout_constraintStart_toEndOf="@+id/imageView"
+            android:layout_marginStart="8dp" android:layout_marginTop="8dp"
+            app:layout_constraintTop_toBottomOf="@+id/track_name"
+            android:textSize="14sp"/>
+</androidx.constraintlayout.widget.ConstraintLayout>
