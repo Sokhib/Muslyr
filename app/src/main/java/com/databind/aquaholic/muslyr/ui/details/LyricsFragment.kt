@@ -11,7 +11,6 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
 import com.databind.aquaholic.muslyr.R
 import com.databind.aquaholic.muslyr.ui.base.ScopedFragment
-import kotlinx.android.synthetic.main.history_fragment.*
 import kotlinx.android.synthetic.main.lyrics_fragment.*
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch

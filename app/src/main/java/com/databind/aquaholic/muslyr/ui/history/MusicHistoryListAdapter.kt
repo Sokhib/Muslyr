@@ -8,6 +8,7 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.constraintlayout.widget.ConstraintLayout
+import androidx.navigation.Navigation
 import androidx.recyclerview.widget.RecyclerView
 import com.databind.aquaholic.muslyr.R
 import com.databind.aquaholic.muslyr.data.db.entity.Lyrics
@@ -28,6 +29,12 @@ class MusicHistoryListAdapter(
     override fun onBindViewHolder(holder: MusicHistoryListAdapter.ViewHolder, position: Int) {
         holder.listItem.setOnClickListener {
             Log.d("myLog", "Position is: $position")
+            val actionHistoryDetail =
+                MusicHistoryListFragmentDirections.actionHistoryDetail().setId(lyrics[position].trackId)
+                    .setTrackName(lyrics[position].trackName)
+                    .setTrackArtist(lyrics[position].trackArtist)
+            Navigation.findNavController(holder.listItem).navigate(actionHistoryDetail)
+
         }
         holder.trackName.text = lyrics[position].trackName
         holder.artist.text = lyrics[position].trackArtist

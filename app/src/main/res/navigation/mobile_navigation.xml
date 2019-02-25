@@ -6,7 +6,9 @@
 
     <fragment android:id="@+id/navigation_history"
               android:name="com.databind.aquaholic.muslyr.ui.history.MusicHistoryListFragment"
-              android:label="History" tools:layout="@layout/history_fragment"/>
+              android:label="History" tools:layout="@layout/history_fragment">
+        <action android:id="@+id/action_history_detail" app:destination="@id/lyricsFragment"/>
+    </fragment>
     <fragment
             android:name="com.databind.aquaholic.muslyr.ui.search.MusicSearchListFragment"
             android:label="Search" tools:layout="@layout/search_fragment" android:id="@+id/navigation_search">
